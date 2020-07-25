@@ -14,7 +14,7 @@ class registrationActivity : AppCompatActivity() {
             val email=etEmail.text.toString()
             val phoneNumber=etPhoneNumber.text.toString()
             val Password=etPassword.text.toString()
-            val passwordConfirmation=et.passwordConfirmation.toString()
+            val passwordConfirmation=et.passwordConfirmation.toString( )
         }
     }
 }
