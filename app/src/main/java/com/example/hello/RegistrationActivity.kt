@@ -3,10 +3,10 @@ package com.example.hello
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class registrationActivity : AppCompatActivity() {
+class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_registration)
 
 //        btnRegister.setOnClickListner{
 //            var firstName=etFirstName.text.toString()

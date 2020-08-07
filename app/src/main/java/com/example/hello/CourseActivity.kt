@@ -1,4 +1,4 @@
-package dev.ronnie.courses
+package com.example.hello
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,9 +17,6 @@ class CourseActivity : AppCompatActivity() {
         courseList.add(Course(2, "Java", 1002, "Mr Omollo", "An old language for Android"))
         courseList.add(Course(3, "Python", 1003, "Miss Lorna", "A hyper Language"))
 
-        /**
-         * Add more courses upto Ten
-         */
 
         val adapter = CourseRecyclerViewAdapter(courseList)
 

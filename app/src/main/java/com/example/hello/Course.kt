@@ -1,4 +1,4 @@
-package dev.ronnie.courses
+package com.example.hello
 
 data class Course(
     val courseId: Int,

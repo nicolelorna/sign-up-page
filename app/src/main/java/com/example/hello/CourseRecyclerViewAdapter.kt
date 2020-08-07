@@ -1,5 +1,4 @@
-package dev.ronnie.courses
-
+package com.example.hello
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
