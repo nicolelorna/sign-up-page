@@ -111,7 +111,9 @@
         android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_fingerprint_black_24dp"
-        tools:layout_editor_absoluteY="266dp" />
+        tools:layout_editor_absoluteY="266dp"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -120,7 +122,8 @@
         android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_fingerprint_black_24dp"
-        tools:layout_editor_absoluteY="327dp" />
+        tools:layout_editor_absoluteY="327dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -130,8 +133,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_mail_black_24dp"
         tools:layout_editor_absoluteY="160dp" />
+6+
 
-    <ImageView
+    <ImageViewj
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
