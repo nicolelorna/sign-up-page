@@ -1,15 +1,15 @@
 package com.example.hello
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.course_item.view.*
 
-class CourseRecyclerViewAdapter(private val courseList: ArrayList<Course>) :
-    RecyclerView.Adapter<CourseRecyclerViewAdapter.MyViewHolder>() {
+class CourseRecyclerViewAdapter(
+    private val courseList: List<Course>
+) : RecyclerView.Adapter<CourseRecyclerViewAdapter.MyViewHolder>() {
 
-
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -36,4 +36,6 @@ class CourseRecyclerViewAdapter(private val courseList: ArrayList<Course>) :
         }
 
     }
+
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }

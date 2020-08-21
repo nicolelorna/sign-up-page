@@ -1,5 +1,6 @@
 package com.example.hello
 
+import com.google.gson.annotations.SerializedName
 
 
 class RegistrationResponse (

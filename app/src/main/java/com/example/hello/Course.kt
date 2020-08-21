@@ -1,9 +1,11 @@
 package com.example.hello
 
+import com.google.gson.annotations.SerializedName
+
 data class Course(
-    val courseId: Int,
-    val courseName: String,
-    val courseCode: Int,
-    val instructor: String,
-    val description: String
+    @SerializedName("course_id") var courseId: String,
+    @SerializedName("course_name") var courseName: String,
+    @SerializedName("course_code") var courseCode: String,
+    @SerializedName("instructor") var instructor: String,
+    @SerializedName("description") var description: String
 )

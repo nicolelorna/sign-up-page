@@ -1,4 +1,4 @@
-package ke.co.hello
+package com.example.hello
 
 import android.content.Intent
 import android.os.Bundle
@@ -34,14 +34,16 @@ class RegistrationActivity : AppCompatActivity() {
                 .build()
 
             registerUser(requestBody)
-            Toast.makeText(baseContext, lastName, Toast.LENGTH_SHORT).show()
         }
     }
 
 
-    fun registerUser(requestBody: RequestBody) {
+    private fun registerUser(requestBody: RequestBody) {
+
         var apiClient = ApiClient.buildService(ApiInterface::class.java)
         var registrationCall = apiClient.registerStudent(requestBody)
+
+
         registrationCall.enqueue(object : Callback<RegistrationResponse> {
             override fun onFailure(call: Call<RegistrationResponse>, t: Throwable) {
                 Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
