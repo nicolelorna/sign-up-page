@@ -1,10 +1,14 @@
-package com.example.hello
+package com.example.hello.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.widget.Toast
+import com.example.hello.api.ApiClient
+import com.example.hello.api.ApiInterface
+import com.example.hello.models.LoginResponse
+import com.example.hello.R
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -38,7 +42,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loginUser(requestBody: RequestBody){
-        val apiClient = ApiClient.buildService(ApiInterface::class.java)
+        val apiClient =
+            ApiClient.buildService(ApiInterface::class.java)
         val loginCall = apiClient.loginStudent(requestBody)
 
         loginCall.enqueue(object : Callback<LoginResponse> {
