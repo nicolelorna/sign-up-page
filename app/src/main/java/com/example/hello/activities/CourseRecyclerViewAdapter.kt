@@ -4,12 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hello.CourseItemClickListener
 import com.example.hello.models.Course
 import com.example.hello.R
 import kotlinx.android.synthetic.main.course_item.view.*
 
 class CourseRecyclerViewAdapter(
-    private val courseList: List<Course>
+    private val courseList: List<Course>,
+    var courseItemClickListener: CourseItemClickListener
 ) : RecyclerView.Adapter<CourseRecyclerViewAdapter.MyViewHolder>() {
 
 
@@ -37,6 +39,10 @@ class CourseRecyclerViewAdapter(
             it.code.text = course.courseCode.toString()
             it.description.text = course.description
 
+        }
+
+        holder.itemView.btnRegisterCourse.setOnClickListener {
+            courseItemClickListener.onItemClick(courseList[position])
         }
 
     }

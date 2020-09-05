@@ -2,6 +2,7 @@ package com.example.hello.api
 
 import com.example.hello.models.CoursesResponse
 import com.example.hello.models.LoginResponse
+import com.example.hello.models.RegCourse
 import com.example.hello.models.RegistrationResponse
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -17,6 +18,12 @@ interface ApiInterface {
 
     @POST("login")
     fun loginStudent(@Body requestBody: RequestBody): Call<LoginResponse>
+
+    @POST("login")
+    fun regCourse(
+        @Body requestBody: RequestBody,
+        @Header("Authorization") accessToken: String
+    ): Call<RegCourse>
 
     @GET("courses")
     fun getCourses(@Header("Authorization") accessToken: String): Call<CoursesResponse>

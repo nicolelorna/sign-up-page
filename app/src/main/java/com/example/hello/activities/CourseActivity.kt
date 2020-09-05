@@ -17,7 +17,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class CourseActivity : AppCompatActivity() {
+class CourseActivity : AppCompatActivity() , CourseItemClickListener {
     lateinit var database: HelloDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,5 +79,10 @@ class CourseActivity : AppCompatActivity() {
         var coursesAdapter = CourseRecyclerViewAdapter(courses)
         course_recyclerview.layoutManager = LinearLayoutManager(baseContext)
         course_recyclerview.adapter = coursesAdapter
+    }
+    override fun onItemClick(course: Course) {
+        //obtain student id from shared preferences
+        //courseId = course.courseId
+        //make a post request https://github.com/owuor91/registration-api
     }
 }
